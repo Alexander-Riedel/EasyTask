@@ -1,14 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 import { Header } from "./header/header";
 import { User } from "./user/user";
+import { DUMMY_USERS } from './user/dummy-users';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, Header, User],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+    selector: 'app-root',
+    imports: [Header, User],
+    templateUrl: './app.html',
+    styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('master-angular-kurs');
+    users = DUMMY_USERS;
 }
