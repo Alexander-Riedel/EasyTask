@@ -11,9 +11,7 @@ import { UserObject } from './user.model';
 })
 export class User {
 	@Input({ required: true }) user!: UserObject;
-	// @Input({ required: true }) id!: string;
-	// @Input({ required: true }) avatar!: string;
-	// @Input({ required: true }) name!: string;
+	@Input({ required: true }) selected!: boolean;
 	@Output() select = new EventEmitter<string>();
 
 	get imagePath() {
