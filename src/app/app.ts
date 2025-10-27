@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { Header } from "./header/header";
-import { User } from "./user/user";
+
+// import { Header } from "./header/header";
+// import { User } from "./user/user";
 import { DUMMY_USERS } from './user/dummy-users';
-import { Tasks } from "./tasks/tasks";
+// import { Tasks } from "./tasks/tasks";
 
 @Component({
     selector: 'app-root',
-    imports: [Header, User, Tasks],
+    standalone: false,
+    // imports: [Header, User, Tasks],
     templateUrl: './app.html',
     styleUrl: './app.scss'
 })
